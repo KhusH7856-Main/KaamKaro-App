@@ -14,6 +14,12 @@ app.use(morgan('dev'));
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+const workerRoutes = require('./routes/workerRoutes');
+app.use('/api/workers', workerRoutes);
+
+const jobRoutes = require('./routes/jobRoutes');
+app.use('/api/jobs', jobRoutes);
+
 app.get('/', (req, res) => {
   res.json({
     success: true,
