@@ -20,6 +20,15 @@ app.use('/api/workers', workerRoutes);
 const jobRoutes = require('./routes/jobRoutes');
 app.use('/api/jobs', jobRoutes);
 
+const attendanceRoutes = require('./routes/attendanceRoutes');
+app.use('/api/attendance', attendanceRoutes);
+
+const salaryRoutes = require('./routes/salaryRoutes');
+app.use('/api/salary', salaryRoutes);
+
+const contractRoutes = require('./routes/contractRoutes');
+app.use('/api/contracts', contractRoutes);
+
 app.get('/', (req, res) => {
   res.json({
     success: true,
